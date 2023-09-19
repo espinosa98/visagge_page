@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #27a776;
+  --color-primary: #AAB7B8;
   --color-secondary: #161718;
 }
 
@@ -135,7 +135,7 @@ h6 {
 }
 
 .page-header .cta-btn:hover {
-  background: #2cbc85;
+  background: #94A1A2;
 }
 
 /*--------------------------------------------------------------
@@ -870,7 +870,7 @@ h6 {
 }
 
 .gallery-single .portfolio-info .btn-visit:hover {
-  background: #2cbc85;
+  background: #94A1A2;
 }
 
 .gallery-single .portfolio-description h2 {
@@ -1204,7 +1204,6 @@ h6 {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #AAB7B8;
   z-index: -1;
 }
 
@@ -1229,7 +1228,7 @@ h6 {
 }
 
 .hero .btn-get-started:hover {
-  background: #2cbc85;
+  background: #94A1A2;
 }
 
 @media (max-width: 768px) {
@@ -1262,4 +1261,43 @@ h6 {
 
 .footer .credits a {
   color: var(--color-primary);
+}
+
+/*--------------------------------------------------------------
+# Descripcion pie de fotos
+--------------------------------------------------------------*/
+.image-details {
+  text-align: center;
+  padding: 2px;
+}
+
+.image-details figcaption {
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.price {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.size-chart {
+  margin-top: 2px;
+  text-align: center;
+}
+
+.size-boxes {
+  display: flex;
+  justify-content: center;
+}
+
+.size-box {
+  border: 1px solid #ccc;
+  padding: 2.5px 7px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.size-box:hover {
+  background-color: #f0f0f0;
 }
