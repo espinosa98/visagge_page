@@ -1301,3 +1301,27 @@ h6 {
 .size-box:hover {
   background-color: #f0f0f0;
 }
+
+/*--------------------------------------------------------------
+# productos relacionados
+--------------------------------------------------------------*/
+.producto-relacionado {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.producto-relacionado img {
+  max-width: 100%;
+}
+
+/* Efecto al pasar el cursor */
+.producto-relacionado:hover {
+  transform: scale(1.05); /* Aumenta el tamaño en un 5% */
+}
+
+.producto-relacionado:hover img {
+  filter: brightness(0.8); /* Cambia el brillo de la imagen al pasar el cursor */
+}
+
