@@ -286,7 +286,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 30px 0;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .header .logo {
@@ -1301,6 +1301,22 @@ h6 {
 .size-box:hover {
   background-color: #f0f0f0;
 }
+
+/*--------------------------------------------------------------
+# hover de img
+--------------------------------------------------------------*/
+.img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Inicialmente oculta la imagen de cambio */
+  transition: opacity 0.3s ease; /* Agrega una transición suave de opacidad */
+}
+
+.gallery-item:hover .img-hover {
+  opacity: 1; /* Muestra la imagen de cambio al pasar el cursor sobre .gallery-item */
+}
+
 
 /*--------------------------------------------------------------
 # productos relacionados
