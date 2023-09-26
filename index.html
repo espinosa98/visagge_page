@@ -47,7 +47,7 @@
         <ul>
           <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="about.html">Nosotros</a></li>
-          <li class="dropdown"><a href="#"><span>Diseños</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="gallery.html">Deportivos</a></li>
               <li><a href="gallery.html">Over size</a></li>
@@ -67,7 +67,7 @@
 
       <div class="row d-flex justify-content-center" style="width: 100%; position: absolute;">
           <div class="col-lg-12 text-center mt-5">
-            <h2 style="margin"><span>VISAGGE</span></h2>
+            <h2><span>VISAGGE</span></h2>
             <div class="announcement">
               <marquee behavior="scroll" direction="left">
                 <span class="announcement-text">¡Envío Gratis en Todos Nuetros Productos!</span>
@@ -90,64 +90,61 @@
 
   <!-- ======= Slider Section ======= -->
   <section id="slider" class="slider">
-    <div class="container-fluid">
-      <div class="row py-5 d-flex justify-content-center align-items-center">
-        <div class="col-lg-12">
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
+      <div class="container-fluid mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <picture>
-                  <source media="(min-width: 992px)" srcset="assets/img/portfolio/133_desk_2000x.webp">
-                  <img src="assets/img/portfolio/9.21.23-Launch_Mobile_1_x800_movil.webp" class="d-block w-100" alt="...">
+                  <source media="(min-width: 992px)" srcset="assets/img/portfolio/133_desk_2000x.webp"> <!-- Imagen web-->
+                  <img src="assets/img/portfolio/9.21.23-Launch_Mobile_1_x800_movil.webp" class="d-block w-100" alt="..."> <!-- Imagen movil-->
                 </picture>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
               </div>
               <div class="carousel-item">
                 <picture>
-                  <source media="(min-width: 992px)" srcset="assets/img/portfolio/133_desk_2000x.webp">
+                  <source media="(min-width: 992px)" srcset="assets/img/portfolio/img_carousel_2.webp">
                   <img src="assets/img/portfolio/9.21.23-Launch_Mobile_1_x800_movil.webp" class="d-block w-100" alt="...">
-                </picture>                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
+                </picture>
               </div>
               <div class="carousel-item">
                 <picture>
-                  <source media="(min-width: 992px)" srcset="assets/img/portfolio/133_desk_2000x.webp">
+                  <source media="(min-width: 992px)" srcset="assets/img/portfolio/img_carousel_2.webp">
                   <img src="assets/img/portfolio/9.21.23-Launch_Mobile_1_x800_movil.webp" class="d-block w-100" alt="...">
                 </picture>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
         </div>
       </div>
-    </div>
   </section><!-- End Hero Section -->
 
   <!-- Separador -->
-  <div class="container-fluid">
-    <div class="separator" style="background-color: #2E4053; text-align: center; padding: 15px 0;">
-      <h2 style="color: #fff;">Nuestros Diseños</h2>
+  <div id="line-info" class="mt-4">
+    <div>
+      <div class="row container-fluid d-flex justify-content-center">
+        <div class="col-xl-2 col-lg-2 col-md-4 col-4">
+          <i class="bi bi-whatsapp"></i>
+          <p><b>Contactanos</b></p>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-4">
+          <a href="http://www.google.com/maps/place/4.710988,-74.072092" target="_blank">
+            <i class="bi bi-geo-alt"></i>
+            <p><b>Tienda Fisica</b></p>
+          </a>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-4">
+            <i class="bi bi-truck"></i>
+            <p><b>Envios Nacionales</b></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -160,10 +157,10 @@
           <div class="container-fluid">
 
             <div class="row gy-4 justify-content-center">
-              <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="gallery-item h-100">
-                  <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-hover img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas_2.webp" class="img-hover img-fluid" alt="">
                   <div class="gallery-links d-flex align-items-center justify-content-center">
                     <a href="assets/img/gallery/gallery-1.jpg" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                     <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -185,12 +182,12 @@
                 </div>
               </div><!-- End Gallery Item -->
 
-              <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="gallery-item h-100">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-hover img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas_2.webp" class="img-hover img-fluid" alt="">
                   <div class="gallery-links d-flex align-items-center justify-content-center">
-                    <a href="assets/img/gallery/gallery-3.jpg" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                    <a href="assets/img/gallery/galeria_camisetas_2.webp" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                     <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   </div>
                   <div class="image-details">
@@ -210,10 +207,10 @@
                 </div>
               </div><!-- End Gallery Item -->
 
-              <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="gallery-item h-100">
-                  <img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-hover img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas_2.webp" class="img-hover img-fluid" alt="">
                   <div class="gallery-links d-flex align-items-center justify-content-center">
                     <a href="assets/img/gallery/gallery-5.jpg" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                     <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -234,10 +231,10 @@
                   </div>
                 </div>
               </div><!-- End Gallery Item -->
-              <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="gallery-item h-100">
-                  <img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-hover img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas_2.webp" class="img-hover img-fluid" alt="">
                   <div class="gallery-links d-flex align-items-center justify-content-center">
                     <a href="assets/img/gallery/gallery-6.jpg" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                     <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -258,10 +255,10 @@
                   </div>
                 </div>
               </div><!-- End Gallery Item -->
-              <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="gallery-item h-100">
-                  <img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-hover img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas_2.webp" class="img-hover img-fluid" alt="">
                   <div class="gallery-links d-flex align-items-center justify-content-center">
                     <a href="assets/img/gallery/gallery-7.jpg" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                     <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -282,10 +279,10 @@
                   </div>
                 </div>
               </div><!-- End Gallery Item -->
-              <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="gallery-item h-100">
-                  <img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-hover img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas_2.webp" class="img-hover img-fluid" alt="">
                   <div class="gallery-links d-flex align-items-center justify-content-center">
                     <a href="assets/img/gallery/gallery-8.jpg" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                     <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -306,10 +303,10 @@
                   </div>
                 </div>
               </div><!-- End Gallery Item -->
-              <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="gallery-item h-100">
-                  <img src="assets/img/gallery/gallery-9.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-hover img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas_2.webp" class="img-hover img-fluid" alt="">
                   <div class="gallery-links d-flex align-items-center justify-content-center">
                     <a href="assets/img/gallery/gallery-9.jpg" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                     <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -330,36 +327,12 @@
                   </div>
                 </div>
               </div><!-- End Gallery Item -->
-              <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="gallery-item h-100">
-                  <img src="assets/img/gallery/gallery-10.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-hover img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas.webp" class="img-fluid" alt="">
+                  <img src="assets/img/gallery/galeria_camisetas_2.webp" class="img-hover img-fluid" alt="">
                   <div class="gallery-links d-flex align-items-center justify-content-center">
                     <a href="assets/img/gallery/gallery-10.jpg" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                    <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                  </div>
-                  <div class="image-details">
-                    <figcaption>Descripción breve de la imagen</figcaption>
-                    <div class="price">$99.99</div>
-                    <div class="size-chart">
-                      <!-- Cuadro de tallas en recuadros horizontales -->
-                      <div class="size-boxes">
-                        <div class="size-box">XS</div>
-                        <div class="size-box">S</div>
-                        <div class="size-box">M</div>
-                        <div class="size-box">L</div>
-                        <div class="size-box">XL</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- End Gallery Item -->
-              <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="gallery-item h-100">
-                  <img src="assets/img/gallery/gallery-11.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/gallery/gallery-3.jpg" class="img-hover img-fluid" alt="">
-                  <div class="gallery-links d-flex align-items-center justify-content-center">
-                    <a href="assets/img/gallery/gallery-11.jpg" title="" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                     <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   </div>
                   <div class="image-details">

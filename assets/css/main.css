@@ -19,9 +19,11 @@
 
 /* Colors */
 :root {
-  --color-default: #fafafa;
+  --color-default: #374342;
   --color-primary: #AAB7B8;
-  --color-secondary: #161718;
+  --color-secondary: #0D0D0D; /* negro */
+  --color-tertiary: #BDBDBD; /* gris */
+  --color-white: #fafafa; /* blanco */
 }
 
 /* Smooth scroll behavior */
@@ -35,7 +37,7 @@
 body {
   font-family: var(--font-default);
   color: var(--color-default);
-  background-color: #000;
+  background-color: var(--color-white)
 }
 
 a {
@@ -103,7 +105,7 @@ h6 {
   position: relative;
 }
 
-.page-header h2 {
+.page-header h2 {{}
   font-size: 56px;
   font-weight: 500;
   color: #fff;
@@ -286,7 +288,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color-tertiary);
 }
 
 .header .logo {z
@@ -376,7 +378,7 @@ h6 {
     letter-spacing: 1px;
     font-size: 13px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-secondary);
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -392,7 +394,7 @@ h6 {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: var(--color-white);
   }
 
   .navbar .dropdown ul {
@@ -405,7 +407,7 @@ h6 {
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background: var(--color-secondary);
+    background: var(--color-tertiary);
     transition: 0.3s;
     border-radius: 4px;
   }
@@ -1348,7 +1350,50 @@ h6 {
 }
 @media (max-width: 768px) {
   .slider {
-    padding-top: 100px;
+    padding-top: 70px;
+  }
+}
+/*---------------------------------------------------------------
+ Estilo de linea informativa
+ --------------------------------------------------------------*/
+
+#line-info {
+    background-color: var(--color-tertiary);
+    padding: 10px 0;
+    text-align: center;
+}
+
+#line-info i {
+    font-size: 2rem;
+    color: var(--color-white);
+    margin: 0 10px;
+}
+
+#line-info i {
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin: 0 10px;
+}
+
+#line-info a:hover i {
+    color: var(--color-secondary);
+    transition: all 0.3s ease-in-out;
+}
+
+#line-info p {
+    color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  #line-info p {
+    font-size: 0.8rem;
   }
 }
 
+/*---------------------------------------------------------------
+ Iconos
+ --------------------------------------------------------------*/
+
+i {
+    color: var(--color-white);
+}
