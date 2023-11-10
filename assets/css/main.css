@@ -310,6 +310,13 @@ h6 {
   font-family: var(--font-secondary);
 }
 
+.header h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-secondary);
+  font-family: var(--font-secondary);
+}
+
 .header .logo i {
   font-size: 32px;
   margin-right: 8px;
@@ -457,11 +464,11 @@ h6 {
 
 @media (min-width: 1280px) and (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
-    left: -90%;
+    left: 100%;
   }
 
   .navbar .dropdown .dropdown:hover>ul {
-    left: -100%;
+    left: 100%;
   }
 }
 
@@ -1384,11 +1391,14 @@ h6 {
 
 #line-info p {
     color: var(--color-secondary);
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
 }
 
 #line-info a:hover p {
     transition: all 0.3s ease-in-out;
     color: var(--color-white);
+
 }
 
 @media (max-width: 768px) {
@@ -1431,45 +1441,42 @@ Modal
   }
 }
 
+.btn-modal i {
+    color: #0D0D0D; /* color de fuente */
+}
+
 .btn-modal {
-    background-color: var(--color-tertiary);
-    color: var(--color-secondary);
-    border-radius: 10px;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s;
+  background: #fff; /* color de fondo */
+  color: #0D0D0D; /* color de fuente */
+  border: 2px solid #0D0D0D; /* tamaño y color de borde */
+  padding: 10px 20px;
+  border-radius: 10px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .btn-modal:hover {
-    background-color: var(--boton-secondary);
-    color: var(--color-white);
-    transition: 0.3s;
+  color: #fff;/* color de fuente hover */
 }
 
-/* Estilo base del botón */
-.animated-button {
+.btn-modal::after {
+  content: "";
+ background: #0D0D0D; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
   padding: 10px 20px;
-  background-color: var(--color-tertiary);
-  color: var(--color-secondary);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(45deg) scale(0, 1);
+  transition: all 0.3s ease;
 }
 
-/* Animación al hacer clic */
-.animated-button:active {
-  background-color: var(--boton-primary);
-  transform: scale(0.95);
+.btn-modal:hover::after {
+  transition: all 0.3s ease-out;
+  transform: skewX(45deg) scale(1, 1);
 }
-
-/* Estilo del botón al pasar el cursor */
-.animated-button:hover {
-  background-color: var(--boton-secondary);
-  color: var(--color-white);
-}
-
