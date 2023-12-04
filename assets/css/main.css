@@ -1266,6 +1266,7 @@ h6 {
 .footer .copyright {
   text-align: center;
   color: var(--color-secondary);
+  font-size: 11px;
 }
 
 .footer .credits {
@@ -1374,7 +1375,6 @@ h6 {
 
 #line-info {
     background-color: var(--color-tertiary);
-    padding: 10px 0;
     text-align: center;
 }
 
@@ -1485,4 +1485,34 @@ Modal
 .btn-modal:hover::after {
   transition: all 0.3s ease-out;
   transform: skewX(45deg) scale(1, 1);
+}
+
+/*---------------------------------------------------------------
+Whatsapp icon
+ --------------------------------------------------------------*/
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-icon a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--color-secondary);
+    padding: 2px 10px;
+    border-radius: 7px;
+    color: white; /* Texto blanco */
+}
+
+.whatsapp-icon i {
+    font-size: 2rem;
+}
+
+.contact-message {
+    font-size: 1rem;
+    font-weight: bold;
 }

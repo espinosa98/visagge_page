@@ -6,8 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>WOLFEIN</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="wolfein, wolfein colombia, ropa over size, ropa deportiva, ropa gimnasio, ropa fitness, ropa gym, ropa deportiva para hombre, ropa deportiva para hombre colombia, ropa deportiva para hombre cali" name="keywords">
+  <meta content="WOLFEIN es una marca de ropa deportiva que busca brindar comodidad y estilo a sus clientes, con prendas de alta calidad y diseños únicos." name="description">
 
   <!-- Favicons -->
   <link href="/assets/img/favicon_wolfein.webp" rel="icon">
@@ -38,7 +38,7 @@
       <nav id="navbar" class="navbar" style="z-index: 5;">
         <ul>
           <li><a href="index.html"><img src="/assets/img/favicon_wolfein.webp" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 8px;"></a></li>
-          <li class="dropdown"><a href="#">Producto <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#">Productos<i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#line-info">Estilos</a></li>
               <!--
@@ -86,20 +86,20 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <picture>
-                  <source media="(min-width: 992px)" srcset="assets/img/portfolio/carousel_web_ref01.webp"> <!-- Imagen web-->
-                  <img src="assets/img/portfolio/carousel_movil_ref01.webp" class="d-block w-100" alt="..."> <!-- Imagen movil-->
+                  <source media="(min-width: 992px)" srcset="assets/img/carousel/carousel_web_ref01.webp"> <!-- Imagen web-->
+                  <img src="assets/img/carousel/carousel_movil_ref01.webp" class="d-block w-100" alt="..."> <!-- Imagen movil-->
                 </picture>
               </div>
               <div class="carousel-item">
                 <picture>
-                  <source media="(min-width: 992px)" srcset="assets/img/portfolio/carousel_web_ref01.webp">
-                  <img src="assets/img/portfolio/carousel_movil_ref01.webp" class="d-block w-100" alt="...">
+                  <source media="(min-width: 992px)" srcset="assets/img/carousel/carousel_web_ref01.webp">
+                  <img src="assets/img/carousel/carousel_movil_ref01.webp" class="d-block w-100" alt="...">
                 </picture>
               </div>
               <div class="carousel-item">
                 <picture>
-                  <source media="(min-width: 992px)" srcset="assets/img/portfolio/carousel_web_ref01.webp">
-                  <img src="assets/img/portfolio/carousel_movil_ref01.webp" class="d-block w-100" alt="...">
+                  <source media="(min-width: 992px)" srcset="assets/img/carousel/carousel_web_ref01.webp">
+                  <img src="assets/img/carousel/carousel_movil_ref01.webp" class="d-block w-100" alt="...">
                 </picture>
               </div>
             </div>
@@ -114,7 +114,7 @@
           </div>
 
           <div class="d-md-none">
-            <img src="assets/img/portfolio/carousel_movil_ref01.webp" class="d-block w-100">
+            <img src="assets/img/carousel/carousel_movil_ref01.webp" class="d-block w-100">
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@
         <div class="col-xl-2 col-lg-2 col-md-4 col-4">
           <a href="https://wa.me/573016000000" target="_blank">
             <i class="bi bi-whatsapp"></i>
-            <p>Contactanos</p>
+            <p>Contáctanos</p>
           </a>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-4 col-4">
@@ -139,7 +139,7 @@
         <div class="col-xl-2 col-lg-2 col-md-4 col-4">
           <a href="">
             <i class="bi bi-truck"></i>
-            <p>Envios Nacionales</p>
+            <p>Envíos Nacionales</p>
           </a>
         </div>
       </div>
@@ -180,8 +180,19 @@
           document.write(new Date().getFullYear());
         </script>
       </div>
+
+      <div class="credits">
+        Designed by <a href="https://cristhianespinosaingenieria.me/" target="_blank">Cristhian Espinosa</a>
+      </div>
     </div>
   </footer><!-- End Footer -->
+
+  <!-- Icono flotante de WhatsApp -->
+  <div id="whatsapp-icon" class="whatsapp-icon">
+      <a href="https://wa.me/573016000000" target="_blank" title="Enviar mensaje por WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+      </a>
+  </div>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -201,13 +212,13 @@
   <script src="assets/js/main.js"></script>
 
   <!-- Cargar el contenido de la galería -->
-  <script src="assets/js/gallery.js"></script>
+   <script type="module" src="assets/js/params_img.js?v=1.0"></script>
+  <script type="module" src="assets/js/gallery.js?v=1.0"></script>
 
   <!-- Cargar el contenido del modal -->
   <script>
       $(document).ready(function () {
-        imgUrl = 'assets/img/portfolio/ref_01.webp';
-        $('#modalContainer').load(`products_detail/detail_modal/ref_01.html?imgUrl=${imgUrl} #detailModal`);
+        $('#modalContainer').load(`products_detail/ref_01.html #detailModal`);
       });
   </script>
 

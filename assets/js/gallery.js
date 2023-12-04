@@ -1,7 +1,4 @@
-var imagenes = [
-    { principal: "assets/img/gallery/galeria_camisetas.webp", interna: "assets/img/gallery/galeria_camisetas_2.webp",
-     imagen_carrousel: "assets/img/gallery/galeria_camisetas.webp", imagen_carrousel_2: "assets/img/gallery/galeria_camisetas_2.webp" },
-];
+import { imagenes } from './params_img.js';
 
 // Función para generar dinámicamente las galerías
 function generarGaleria() {
@@ -61,5 +58,5 @@ function mostrarDetallesModal(imagen) {
     var modalImg2 = modal.querySelector('.modal-body #img2');
 
     modalImg.src = imagen.imagen_carrousel;
-    modalImg2.src = imagen.imagen_carrousel;
+    modalImg2.src = imagen.imagen_carrousel_2;
 }
