@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>WOLFEIN - TODO</title>
+  <meta content="wolfein, wolfein colombia, ropa over size, ropa deportiva, ropa gimnasio, ropa fitness, ropa gym, ropa deportiva para hombre, ropa deportiva para hombre colombia, ropa deportiva para hombre cali" name="keywords">
+  <meta content="WOLFEIN es una marca de ropa deportiva que busca brindar comodidad y estilo a sus clientes, con prendas de alta calidad y diseños únicos." name="description">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon_wolfein.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<style>
+    .page-header {
+        background: linear-gradient(to right, #BDBDBD 50%, #000 50%);
+        position: relative;
+        overflow: hidden;
+        padding: 50px 0; /* Ajusta según sea necesario */
+    }
+
+    .page-header h2 {
+        position: relative;
+        z-index: 2;
+        color: white; /* Color del texto */
+    }
+
+    .cta-btn {
+        /* Agrega estilos para el botón si es necesario */
+    }
+</style>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <nav id="navbar" class="navbar" style="z-index: 5;">
+        <ul>
+          <li><a href="index.html"><img src="/assets/img/favicon_wolfein.webp" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 8px;"></a></li>
+          <li class="dropdown"><a href="#">Productos<i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#line-info">Estilos</a></li>
+              <!--
+              <li><a href="gallery.html">Deportivos</a></li>
+              <li class="dropdown"><a href="#"><span>Sub Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li><a href="#">Sub Menu 2</a></li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li>-->
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <div class="row d-flex justify-content-center" style="width: 100%; position: absolute;">
+        <div class="col-lg-12 text-center mt-5">
+          <h2><span>WOLFEIN</span></h2>
+          <div class="announcement mt-3">
+            <marquee behavior="scroll" direction="left">
+              <span class="announcement-text">¡Envío Gratis en Todos Nuestros Productos!</span>
+            </marquee>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-social-links" style="z-index: 5;">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Gallery Section ======= -->
+  <main id="main" data-aos="fade">
+
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Todo</h2>
+            <a class="cta-btn" href="index.html">Inicio</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="gallery" class="gallery">
+        <div class="d-flex justify-content-center">
+            <div class="col-lg-10">
+                <div class="container-fluid">
+                    <div class="row gy-4 justify-content-center" id="gallery-container">
+                        <!-- Aquí se generará dinámicamente el contenido -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Gallery Section -->
+  </main><!-- End #main -->
+
+  <!-- Modal -->
+  <div id="modalContainer"></div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-12 text-center mt-5">
+          <h2><span>WOLFEIN</span></h2>
+        </div>
+      </div>
+
+      <div class="copyright mt-3">
+        &copy; Copyright <strong><span>WOLFINE</span></strong>. All Rights Reserved
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+
+      <div class="credits">
+        Designed by <a href="https://cristhianespinosaingenieria.me/" target="_blank">Cristhian Espinosa</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Icono flotante de WhatsApp -->
+  <div id="whatsapp-icon" class="whatsapp-icon">
+      <a href="https://wa.me/573016000000" target="_blank" title="Enviar mensaje por WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+      </a>
+  </div>
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader">
+    <div class="line"></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Cargar el contenido de la galería -->
+   <script type="module" src="assets/js/params_img.js?v=1.0"></script>
+  <script type="module" src="assets/js/gallery_all.js?v=1.0"></script>
+
+  <!-- Cargar el contenido del modal -->
+  <script>
+      $(document).ready(function () {
+        $('#modalContainer').load(`products_detail/ref_01.html #detailModal`);
+      });
+  </script>
+
+</body>
+
+</html>
