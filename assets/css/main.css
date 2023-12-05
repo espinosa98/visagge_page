@@ -1401,18 +1401,11 @@ page-header .cta-btn p {
 #line-info i {
     font-size: 2rem;
     color: var(--color-white);
-    margin: 0 10px;
 }
 
 #line-info i {
     font-size: 1.8rem;
     color: var(--color-white);
-    margin: 0 10px;
-}
-
-#line-info a:hover i {
-    transition: all 0.3s ease-in-out;
-    color: var(--color-secondary);
 }
 
 #line-info p {
@@ -1421,15 +1414,20 @@ page-header .cta-btn p {
     font-size: 1.2rem;
 }
 
-#line-info a:hover p {
-    transition: all 0.3s ease-in-out;
-    color: var(--color-white);
-
+#line-info .shipment{
+    background: #000;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 @media (max-width: 768px) {
   #line-info p {
     font-size: 0.8rem;
+  }
+  #line-info .shipment{
+    margin-left: 23px;
   }
 }
 
