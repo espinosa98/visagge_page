@@ -124,26 +124,46 @@ h6 {
   }
 }
 
-.page-header p {
+page-header .cta-btn p {
   color: var(--color-secondary);
 }
 
 .page-header .cta-btn {
-  font-family: var(--font-primary);
-  font-weight: 400;
-  font-size: 14px;
+  background: #fff; /* color de fondo */
+  color: #0D0D0D; /* color de fuente */
+  border: 2px solid var(--color-secondary); /* color de borde */
+  padding: 8px 25px;
+  border-radius: 10px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: 0.3s;
-  color: #fff;
-  background: var(--color-primary);
+  font-family: var(--font-secondary);
+  font-size: 16px;
 }
 
 .page-header .cta-btn:hover {
-  background: #94A1A2;
+  color: #fff;/* color de fuente hover */
+}
+
+.page-header .cta-btn::after {
+  content: "";
+  background: linear-gradient(to right, #0D0D0D 50%, #BDBDBD 50%);
+  position: absolute;
+  z-index: -1;
+  padding: 10px 20px;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(0deg) scale(0, 1);
+  transition: all 0.3s ease;
+}
+
+.page-header .cta-btn:hover::after {
+  transition: all 0.3s ease-out;
+  transform: skewX(0deg) scale(1, 1);
 }
 
 /*--------------------------------------------------------------
