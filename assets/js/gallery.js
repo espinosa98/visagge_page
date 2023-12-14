@@ -18,12 +18,10 @@ function generarGaleria() {
                     </button>
                 </div>
                 <div class="image-details">
-                    <figcaption>Descripción breve de la imagen</figcaption>
-                    <div class="price">$99.99</div>
+                    <figcaption> ${imagen.referencia} </figcaption>
+                    <div class="price">$${imagen.precio}</div>
                     <div class="size-chart">
-                        <!-- Cuadro de tallas en recuadros horizontales -->
                         <div class="size-boxes">
-                            <div class="size-box">XS</div>
                             <div class="size-box">S</div>
                             <div class="size-box">M</div>
                             <div class="size-box">L</div>
@@ -57,6 +55,14 @@ function mostrarDetallesModal(imagen) {
     var modalImg = modal.querySelector('.modal-body #img1');
     var modalImg2 = modal.querySelector('.modal-body #img2');
 
+    // tituo del modal
+    var modalTitle = modal.querySelector('.modal-body h3');
+
+    // precio modal
+    var modalPrice = modal.querySelector('.modal-body .price');
+
     modalImg.src = imagen.imagen_carrousel;
     modalImg2.src = imagen.imagen_carrousel_2;
+    modalTitle.innerHTML = imagen.referencia;
+    modalPrice.innerHTML = `${imagen.precio}`;
 }
