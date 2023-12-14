@@ -56,7 +56,7 @@ function mostrarDetallesModal(imagen) {
     var modalImg2 = modal.querySelector('.modal-body #img2');
 
     // tituo del modal
-    var modalTitle = modal.querySelector('.modal-body h3');
+    var modalTitle = modal.querySelector('.modal-body h5');
 
     // precio modal
     var modalPrice = modal.querySelector('.modal-body .price');
