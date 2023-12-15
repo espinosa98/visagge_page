@@ -1,6 +1,6 @@
 <!-- Modal -->
-<div class="modal fade" id="detailModal">
-  <div class="modal-dialog modal-dialog-centered modal-llg">
+<div class="modal" id="detailModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -57,9 +57,19 @@
                   <div class="size-box">XL</div>
                 </div>
               </div>
+              <!-- Cuadro de tallas en recuadros horizontales -->
+              <div class="size-selected mt-2">
+                <label for="talla">Selecciona la talla:</label>
+                <select id="talla" class="form-select" style="text-align: center;">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+              </div>
             </div>
           </div>
-          <a target="_blank" class="btn mt-4 btn-modal">
+          <a target="_blank" class="btn mt-4 btn-modal btn-comprar">
             <i class="bi bi-whatsapp"></i> Comprar / Más Info
           </a>
         </div>

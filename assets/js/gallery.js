@@ -57,16 +57,42 @@ function mostrarDetallesModal(imagen) {
 
     // tituo del modal
     var modalTitle = modal.querySelector('.modal-body h5');
-
     // precio modal
     var modalPrice = modal.querySelector('.modal-body .price');
-
     // mensaje whatsapp
     var modalWhatsapp = modal.querySelector('.modal-body .btn-modal');
+    // obtener talla seleccionada
+    var tallaSeleccionada = modal.querySelector('#talla').value;
 
     modalImg.src = imagen.imagen_carrousel;
     modalImg2.src = imagen.imagen_carrousel_2;
     modalTitle.innerHTML = imagen.referencia;
     modalPrice.innerHTML = `${imagen.precio}`;
-    modalWhatsapp.href = `https://wa.me/573054608795?text=Hola%20me%20interesa%20${imagen.referencia}`;
+
+    // Agregar evento de clic al botón para mostrar SweetAlert antes de enviar a WhatsApp
+    modalWhatsapp.addEventListener('click', function() {
+        // Obtener la talla seleccionada directamente al hacer clic
+        var tallaSeleccionada = modal.querySelector('#talla').value;
+
+        // Mensaje de confirmación antes de enviar
+        Swal.fire({
+            title: '¿Confirmar pedido?',
+            html: `
+                    Detalles del Pedido:<br>
+                    Referencia: ${imagen.referencia}<br>
+                    Precio: ${imagen.precio}<br>
+                    Talla: ${tallaSeleccionada}
+                `,
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: '<i class="bi bi-whatsapp"></i> Confirmar',
+            confirmButtonColor: '#4CAF50',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Si el usuario confirma, redirige a WhatsApp
+                window.location.href = `https://wa.me/573054608795?text=Detalle%20del%20pedido:%20${imagen.referencia}%0ATalla%20Seleccionada:%20${tallaSeleccionada}%0APrecio:%20${imagen.precio}`;
+            }
+        });
+    });
 }
