@@ -1552,3 +1552,22 @@ questions
     margin-top: 80px;
     margin-bottom: 80px;
 }
+/*---------------------------------------------------------------
+mensagge_promo
+--------------------------------------------------------------*/
+
+.message_promo
+{
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .message_promo {
+    font-size: 0.9rem;
+  }
+}
