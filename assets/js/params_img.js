@@ -41,7 +41,7 @@ export const imagenes = [
         imagen_carrousel: `${base_modal}ref_03/DELANTEROGRIS3.webp`, imagen_carrousel_2: `${base_modal}ref_03/ESPALDAGRIS3.webp` },
 
     { principal: `${base_modal}ref_03/ESPALDANEGRO3.webp`, interna: `${base_modal}ref_03/DELANTERONEGRO3.webp`, precio: `65.000`, referencia: `OVERSIZED "PREMIUM" BERSERKER NEGRO`,
-        imagen_carrousel: `${base_modal}ref_03/DELANTERONEGRO3.webp`, imagen_carrousel_2: `${base_modal}ref_03/ESPALDANEGRA3.webp` },
+        imagen_carrousel: `${base_modal}ref_03/DELANTERONEGRO3.webp`, imagen_carrousel_2: `${base_modal}ref_03/ESPALDANEGRO3.webp` },
 
     { principal: `${base_modal}joggers/joggerbeige1.webp`, interna: `${base_modal}joggers/joggerbeige1.webp`, precio: `60.000`, referencia: `JOGGERS BEIGE`,
         imagen_carrousel: `${base_modal}joggers/joggerbeige1.webp`, imagen_carrousel_2: `${base_modal}joggers/joggerbeige1.webp` },
