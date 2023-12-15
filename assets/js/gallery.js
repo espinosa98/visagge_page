@@ -61,8 +61,12 @@ function mostrarDetallesModal(imagen) {
     // precio modal
     var modalPrice = modal.querySelector('.modal-body .price');
 
+    // mensaje whatsapp
+    var modalWhatsapp = modal.querySelector('.modal-body .btn-modal');
+
     modalImg.src = imagen.imagen_carrousel;
     modalImg2.src = imagen.imagen_carrousel_2;
     modalTitle.innerHTML = imagen.referencia;
     modalPrice.innerHTML = `${imagen.precio}`;
+    modalWhatsapp.href = `https://wa.me/573054608795?text=Hola%20me%20interesa%20${imagen.referencia}`;
 }
