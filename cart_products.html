@@ -79,6 +79,7 @@
                         <th>Referencia</th>
                         <th>Precio</th>
                         <th>Talla</th>
+                        <th>Cantidad</th>
                         <th>Acción</th>
                     </tr>
                 </thead>
@@ -169,7 +170,7 @@
 
       // recorrer el carrito y generar el html
       carritoRecuperado.forEach((producto) => {
-        const { imagen, referencia, precio, talla, id } = producto;
+        const { imagen, referencia, precio, talla, cantidad, id } = producto;
 
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -179,6 +180,7 @@
             <td>${referencia}</td>
             <td>${precio}</td>
             <td>${talla}</td>
+            <td>${cantidad}</td>
             <td>
               <a href="#" class="borrar-producto btn btn-danger btn-sm" data-id="${id}">Eliminar</a>
             </td>
@@ -247,8 +249,8 @@
         let mensajePedido = 'Hola, me gustaría realizar el siguiente pedido: \n\n';
 
         carritoRecuperado.forEach((producto) => {
-          const { imagen, referencia, precio, talla, id } = producto;
-          mensajePedido += `Referencia: ${referencia} \nPrecio: ${precio} \nTalla: ${talla} \n\n`;
+          const { imagen, referencia, precio, talla, cantidad, id } = producto;
+          mensajePedido += `Referencia: ${referencia} \nPrecio: ${precio} \nTalla: ${talla} \nCantidad: ${cantidad} \n\n`;
         });
 
         // obtener los comentarios y enviarlos

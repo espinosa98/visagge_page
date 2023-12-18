@@ -84,12 +84,14 @@ function mostrarDetallesModal(imagen) {
     modalImg.src = imagen.imagen_carrousel;
     modalImg2.src = imagen.imagen_carrousel_2;
     modalTitle.innerHTML = imagen.referencia;
-    modalPrice.innerHTML = `${imagen.precio}`;
+    modalPrice.innerHTML = `Precio: $${imagen.precio}`;
 
     // Agregar evento de clic al botón para mostrar SweetAlert antes de enviar a WhatsApp
     modalWhatsapp.addEventListener('click', function() {
         // Obtener la talla seleccionada directamente al hacer clic
         var tallaSeleccionada = modal.querySelector('#talla').value;
+        // obtener cantidad seleccionada
+        var cantidadSeleccionada = modal.querySelector('#quantity').value;
 
         // Mensaje de confirmación antes de enviar
         Swal.fire({
@@ -98,7 +100,8 @@ function mostrarDetallesModal(imagen) {
                     Detalles del Pedido:<br>
                     Referencia: ${imagen.referencia}<br>
                     Precio: ${imagen.precio}<br>
-                    Talla: ${tallaSeleccionada}
+                    Talla: ${tallaSeleccionada}<br>
+                    Cantidad: ${cantidadSeleccionada}<br>
                 `,
             icon: 'question',
             showCancelButton: true,
@@ -126,9 +129,9 @@ function mostrarDetallesModal(imagen) {
                     imagen: imagen.imagen_carrousel,
                     referencia: imagen.referencia,
                     precio: imagen.precio,
-                    talla: tallaSeleccionada
+                    talla: tallaSeleccionada,
+                    cantidad: cantidadSeleccionada,
                 });
-                console.log(carrito);
 
                 // Mostrar mensaje de éxito
                 Swal.fire({

@@ -739,6 +739,7 @@ page-header .cta-btn p {
 .gallery .gallery-item {
   position: relative;
   overflow: hidden;
+  font-family: var(--font-secondary);
 }
 
 .gallery .gallery-item img {
@@ -1436,6 +1437,10 @@ i {
 /*---------------------------------------------------------------
 Modal
  --------------------------------------------------------------*/
+ #detailModal{
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+ }
 .modal-header{
     min-height: 1px;
     padding: 0px;
@@ -1497,6 +1502,13 @@ Modal
 .btn-modal:hover::after {
   transition: all 0.5s ease-out;
   transform: skewX(45deg) scale(1, 1);
+}
+
+#quantity {
+    text-align: center;
+    width: 50px;
+    margin-left: 10px;
+    border-radius: 5px;
 }
 
 /*---------------------------------------------------------------
