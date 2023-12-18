@@ -93,6 +93,18 @@ function mostrarDetallesModal(imagen) {
         // obtener cantidad seleccionada
         var cantidadSeleccionada = modal.querySelector('#quantity').value;
 
+        // Validar que cantidad sea mayor a 0
+        if (cantidadSeleccionada <= 0) {
+            Swal.fire({
+                icon: 'error',
+                title: '¡La cantidad debe ser mayor a 0!',
+                text: 'su cantidad Ingresada es: ' + cantidadSeleccionada,
+                showConfirmButton: false,
+                timer: 1500,
+            });
+            return;
+        }
+
         // Mensaje de confirmación antes de enviar
         Swal.fire({
             title: '¿Confirmar pedido?',
