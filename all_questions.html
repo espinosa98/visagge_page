@@ -10,7 +10,7 @@
   <meta content="WOLFEIN es una marca de ropa deportiva que busca brindar comodidad y estilo a sus clientes, con prendas de alta calidad y diseños únicos." name="description">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon_wolfein.webp" rel="icon">
+  <link href="assets/img/favicon_wolfein.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -88,7 +88,11 @@
       </div>
 
       <div class="header-social-links" style="z-index: 5;">
-        <a href="https://www.instagram.com/wolfeindeportivo?igshid=OGQ5ZDc2ODk2ZA==" class="instagram" target="_blank"><i class="bi bi-instagram "></i></a>
+        <a id="carrito">
+          <i class="bi bi-cart"></i>
+          <span class="badge bg-danger rounded-pill" id="contador-carrito">0</span>
+        </a>
+        <a href="https://www.instagram.com/wolfeindeportivo?igshid=OGQ5ZDc2ODk2ZA==" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
       </div>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
@@ -105,7 +109,6 @@
           <div class="col-lg-6 text-center">
             <h2>Preguntas / Dudas</h2>
             <a class="cta-btn" href="index.html">Volver Inicio</a>
-
           </div>
         </div>
       </div>
@@ -131,8 +134,10 @@
                         </p>
                         <ol>
                             <li>Selecciona el producto que deseas comprar.</li>
-                            <li>Dale a la opcion comprar / Mas Info</li>
-                            <li>Envianos la referencia del producto y talla</li>
+                            <li>Selecciona la talla que deseas.</li>
+                            <li>Dale a la opcion Agregar al carrito.</li>
+                            <li>Ve al carrito de compras, que se encuentra en la parte superior derecha.</li>
+                            <li>Cuando estes en el carrito de compras, dale a la opcion Confirmar Compra.</li>
                             <li>Uno de nuestros asesores se pondrá en contacto contigo para confirmar tu pedido.</li>
                             <li>Realiza el pago de tu pedido.</li>
                             <li>Envianos el comprobante de pago.</li>
@@ -225,6 +230,12 @@
         </div>
       </div>
 
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 text-center mt-1">
+          <a href="privacy_policies.html">Política de Privacidad</a>
+        </div>
+      </div>
+
       <div class="copyright mt-3">
         &copy; Copyright <strong><span>WOLFEIN</span></strong>. All Rights Reserved
         <script>
@@ -261,8 +272,18 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+    <script>
+      // Enviar el carrito a la página de compras
+      $('#carrito').attr('href', 'cart_products.html');
 
-  <!-- Cargar el contenido del modal -->
+      // obtener localStorage
+        let carrito = JSON.parse(localStorage.getItem('carrito'));
+        const contadorCarrito = document.querySelector('#contador-carrito');
+
+        if (carrito) {
+            contadorCarrito.innerHTML = carrito.length;
+        }
+  </script>
 
 </body>
 

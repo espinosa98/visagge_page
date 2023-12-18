@@ -1389,6 +1389,7 @@ page-header .cta-btn p {
 #line-info {
     background-color: var(--color-tertiary);
     text-align: center;
+    font-family: var(--font-secondary);
 }
 
 #line-info i {
@@ -1494,7 +1495,7 @@ Modal
 }
 
 .btn-modal:hover::after {
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
   transform: skewX(45deg) scale(1, 1);
 }
 
@@ -1557,6 +1558,11 @@ questions
     margin-top: 80px;
     margin-bottom: 80px;
 }
+
+.questions #politicas {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+}
 /*---------------------------------------------------------------
 mensagge_promo
 --------------------------------------------------------------*/
@@ -1576,3 +1582,90 @@ mensagge_promo
     font-size: 0.9rem;
   }
 }
+
+/*---------------------------------------------------------------
+carrito de compras
+--------------------------------------------------------------*/
+
+.carrito_compras {
+    font-family: var(--font-secondary);
+}
+
+.carrito_compras h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+}
+
+.carrito_compras table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    pading: 10px;
+}
+
+@media (max-width: 768px) {
+  .carrito_compras table {
+    font-size: 0.9rem;
+  }
+}
+/* ------------------------------------
+ swelalert mod
+------------------------------------ */
+
+
+/* Ajustar el tamaño del título y el texto de SweetAlert */
+.swal2-title {
+  font-size: 18px; /* Tamaño del título */
+}
+
+.swal2-text {
+  font-size: 12px; /* Tamaño del texto */
+}
+
+.swal2-popup {
+  font-size: 13px; /* Tamaño de la fuente del modal */
+}
+
+.swal2-actions {
+  font-size: 12px; /* Tamaño de los botones */
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #0D0D0D; /* Color de fondo del botón */
+  color: #fff; /* Color de fuente del botón */
+}
+
+/* ----------------------------------
+Header Page
+---------------------------------- */
+.page-header {
+    background: linear-gradient(to right, #BDBDBD 50%, #000 50%);
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0; /* Ajusta según sea necesario */
+}
+
+.page-header h2 {
+    position: relative;
+    z-index: 2;
+    color: white; /* Color del texto */
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+}
+
+.cta-btn {
+    /* Agrega estilos para el botón si es necesario */
+}
+
+@media (max-width: 768px) {
+  .page-header h2 {
+    font-size: 2rem;
+  }
+}
+

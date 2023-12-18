@@ -1,4 +1,5 @@
 import { imagenes } from './params_img.js';
+import { guardarCarritoLocalStorage } from './carrito.js';
 
 // Función para generar dinámicamente las galerías
 function generarGaleria() {
@@ -46,6 +47,22 @@ function generarGaleria() {
 // Llama a la función para generar la galería al cargar la página
 window.onload = generarGaleria;
 
+// obtener el carrito del localstorage
+
+function obtenerCarritoLocalStorage() {
+    let carritoLS;
+
+    if (localStorage.getItem('carrito') === null) {
+        carritoLS = [];
+    } else {
+        carritoLS = JSON.parse(localStorage.getItem('carrito'));
+    }
+    return carritoLS;
+
+}
+
+// obtener el carrito del localstorage
+let carrito = obtenerCarritoLocalStorage();
 // Función para mostrar detalles en el modal
 function mostrarDetallesModal(imagen) {
 
@@ -85,14 +102,50 @@ function mostrarDetallesModal(imagen) {
                 `,
             icon: 'question',
             showCancelButton: true,
-            confirmButtonText: '<i class="bi bi-whatsapp"></i> Confirmar',
+            confirmButtonText: 'Agregar',
             confirmButtonColor: '#4CAF50',
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
-                // Si el usuario confirma, redirige a WhatsApp
-                window.location.href = `https://wa.me/573054608795?text=Detalle%20del%20pedido:%20${imagen.referencia}%0ATalla%20Seleccionada:%20${tallaSeleccionada}%0APrecio:%20${imagen.precio}`;
+
+                // verificar si ya existe el producto en el carrito
+                const existe = carrito.some(item => item.referencia === imagen.referencia);
+                if (existe) {
+                    // enviar mensaje de que ya existe el producto en el carrito
+                    Swal.fire({
+                        icon: 'info',
+                        title: '¡El producto ya existe en el carrito!',
+                        showConfirmButton: false,
+                        timer: 1500,
+                    });
+                    return;
+                }
+
+                // Agregar al carrito
+                carrito.push({
+                    imagen: imagen.imagen_carrousel,
+                    referencia: imagen.referencia,
+                    precio: imagen.precio,
+                    talla: tallaSeleccionada
+                });
+                console.log(carrito);
+
+                // Mostrar mensaje de éxito
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Producto agregado al carrito!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                });
+
+                // Guardar carrito en el localstorage
+                guardarCarritoLocalStorage(carrito);
+                // Mostrar el numero de productos
+                const contadorCarrito = document.querySelector('#contador-carrito');
+                contadorCarrito.innerHTML = obtenerCarritoLocalStorage().length;
             }
         });
     });
 }
+
+export { carrito };
