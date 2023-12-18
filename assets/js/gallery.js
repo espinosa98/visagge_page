@@ -92,6 +92,8 @@ function mostrarDetallesModal(imagen) {
         var tallaSeleccionada = modal.querySelector('#talla').value;
         // obtener cantidad seleccionada
         var cantidadSeleccionada = modal.querySelector('#quantity').value;
+        // Convertir la cadena a un número entero
+        var cantidadSeleccionada = parseInt(cantidadSeleccionada);
 
         // Validar que cantidad sea mayor a 0
         if (cantidadSeleccionada <= 0) {
