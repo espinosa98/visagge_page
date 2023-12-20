@@ -1475,7 +1475,7 @@ Modal
   background: #fff; /* color de fondo */
   color: #0D0D0D; /* color de fuente */
   border: 2px solid #0D0D0D; /* tamaño y color de borde */
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 10px; /* redondear bordes */
   position: relative;
   z-index: 1;
@@ -1633,7 +1633,7 @@ carrito de compras
   background: #fff; /* color de fondo */
   color: #0D0D0D; /* color de fuente */
   border: 2px solid #0D0D0D; /* tamaño y color de borde */
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 10px; /* redondear bordes */
   position: relative;
   z-index: 1;
