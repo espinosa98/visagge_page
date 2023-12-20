@@ -96,8 +96,11 @@
         </div>
       </div>
       <br>
-      <a class="btn btn-primary" href="index">Seguir Comprando</a>
-      <a class="btn btn-success" id="confirmar-compra">
+      <a class="btn btn-modal" href="index">
+        <i class="bi bi-arrow-left"></i>
+        Seguir Comprando
+      </a>
+      <a class="btn btn-pedido" id="confirmar-compra">
         <i class="bi bi-whatsapp"></i>
         Confirmar Compra
       </a>
@@ -245,23 +248,88 @@
           text: 'No hay productos en el carrito',
         });
       } else {
-        let mensajePedido = 'Hola, me gustaría realizar el siguiente pedido: \n\n';
-
-        carritoRecuperado.forEach((producto) => {
-          const { imagen, referencia, precio, talla, cantidad, id } = producto;
-          mensajePedido += `Referencia: ${referencia} \nPrecio: ${precio} \nTalla: ${talla} \nCantidad: ${cantidad} \n\n`;
+        // Pedir confirmación para ingresar código promocional
+        Swal.fire({
+          title: '¿Tienes un código promocional?',
+          showDenyButton: true,
+          showCancelButton: true,
+          confirmButtonText: `Sí`,
+          denyButtonText: `No`,
+          cancelButtonText: 'Cancelar'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            showCodigoPromocionalDialog();
+          } else if (result.isDenied) {
+            continuarSinCodigo();
+          }
         });
-
-        // obtener los comentarios y enviarlos
-        const comentarios = document.querySelector('#exampleFormControlTextarea1').value;
-        mensajePedido += `Comentarios: ${comentarios}`;
-
-         window.location.href = `https://wa.me/573054608795?text=${encodeURIComponent(mensajePedido)}`;
-        }
-
-        // limpiar el carrito
-        localStorage.removeItem('carrito');
+      }
     });
+
+    // Función para mostrar cuadro de diálogo para ingresar código promocional
+    function showCodigoPromocionalDialog() {
+      Swal.fire({
+        title: 'Ingrese el código promocional',
+        input: 'text',
+        inputPlaceholder: 'Escriba su código aquí',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        inputValidator: (value) => {
+          if (!value) {
+            return 'Por favor, ingrese un código promocional';
+          }
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const codigoPromocional = result.value;
+          continuarConCodigo(codigoPromocional);
+        }
+      });
+    }
+
+    // Función para continuar sin un código promocional
+    function continuarSinCodigo() {
+      let mensajePedido = construirMensajePedido();
+
+      // Redirigir a WhatsApp con el mensaje construido
+      window.location.href = `https://wa.me/573054608795?text=${encodeURIComponent(mensajePedido)}`;
+
+      // Limpiar el carrito
+      localStorage.removeItem('carrito');
+
+    }
+
+    // Función para continuar con un código promocional
+    function continuarConCodigo(codigoPromocional) {
+      let mensajePedido = construirMensajePedido();
+
+      // Incorporar el código promocional en el mensaje
+      mensajePedido += `Código Promocional: ${codigoPromocional}\n`;
+
+      // Redirigir a WhatsApp con el mensaje construido
+      window.location.href = `https://wa.me/573054608795?text=${encodeURIComponent(mensajePedido)}`;
+
+      // Limpiar el carrito
+      localStorage.removeItem('carrito');
+
+    }
+
+    // Función para construir el mensaje del pedido
+    function construirMensajePedido() {
+      let mensajePedido = 'Hola, me gustaría realizar el siguiente pedido: \n\n';
+
+      carritoRecuperado.forEach((producto) => {
+        const { referencia, precio, talla, cantidad } = producto;
+        mensajePedido += `Referencia: ${referencia} \nPrecio: ${precio} \nTalla: ${talla} \nCantidad: ${cantidad} \n\n`;
+      });
+
+      // Obtener los comentarios y agregarlos al mensaje
+      const comentarios = document.querySelector('#exampleFormControlTextarea1').value;
+      mensajePedido += `Comentarios: ${comentarios}\n`;
+
+      return mensajePedido;
+    }
   </script>
 
 </body>

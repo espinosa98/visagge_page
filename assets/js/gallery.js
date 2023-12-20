@@ -120,7 +120,6 @@ function mostrarDetallesModal(imagen) {
             icon: 'question',
             showCancelButton: true,
             confirmButtonText: 'Agregar',
-            confirmButtonColor: '#4CAF50',
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {

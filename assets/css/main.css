@@ -1467,6 +1467,9 @@ Modal
 .btn-modal i {
     color: #0D0D0D; /* color de fuente */
 }
+.btn-modal:hover i {
+    color: #fff;/* color de fuente hover */
+}
 
 .btn-modal {
   background: #fff; /* color de fondo */
@@ -1616,6 +1619,50 @@ carrito de compras
     border-collapse: collapse;
     margin-bottom: 20px;
     pading: 10px;
+}
+
+.btn-pedido i {
+    color: #0D0D0D; /* color de fuente */
+}
+
+.btn-pedido:hover i {
+    color: #fff;/* color de fuente hover */
+}
+
+.btn-pedido {
+  background: #fff; /* color de fondo */
+  color: #0D0D0D; /* color de fuente */
+  border: 2px solid #0D0D0D; /* tamaño y color de borde */
+  padding: 10px 20px;
+  border-radius: 10px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn-pedido:hover {
+  color: #fff;/* color de fuente hover */
+}
+
+.btn-pedido::after {
+  content: "";
+  background: #00BB2D; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 10px 20px;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(45deg) scale(0, 1);
+  transition: all 0.3s ease;
+}
+
+.btn-pedido:hover::after {
+  transition: all 0.5s ease-out;
+  transform: skewX(45deg) scale(1, 1);
 }
 
 @media (max-width: 768px) {
