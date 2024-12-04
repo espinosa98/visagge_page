@@ -10,20 +10,34 @@ function generarGaleria() {
         galleryItem.className = 'col-xl-3 col-lg-4 col-md-6 col-6';
 
         galleryItem.innerHTML = `
-            <div class="gallery-item h-100">
+            <div class="gallery-item h-100 position-relative">
+                <!-- Triángulo "Preordenar" si imagen.preorden es true -->
+                ${imagen.preorden ? `
+                    <div class="preorder-triangle">
+                        <span>Preordenar</span>
+                    </div>
+                ` : ''}
+
                 <img src="${imagen.principal}" class="img-fluid" alt="">
-                <img src="${imagen.interna}"  class="img-hover img-fluid" alt="">
+                <img src="${imagen.interna}" class="img-hover img-fluid" alt="">
+
+                ${!imagen.disponible ? `
+                    <div class="overlay-not-available">
+                        <span>No disponible</span>
+                    </div>
+                ` : ''}
                 <div class="gallery-links d-flex align-items-center justify-content-center">
-                    <button class="btn-modal" data-bs-toggle="modal" data-bs-target="#detailModal">
-                        <i class="bi bi-link-45deg"></i>Ver
-                    </button>
+                    ${imagen.disponible ? `
+                        <button class="btn-modal" data-bs-toggle="modal" data-bs-target="#detailModal">
+                            <i class="bi bi-link-45deg"></i>Ver
+                        </button>
+                    ` : ''}
                 </div>
                 <div class="image-details">
-                    <figcaption> ${imagen.referencia} </figcaption>
+                    <figcaption>${imagen.referencia}</figcaption>
                     <div class="price">$${imagen.precio}</div>
                     <div class="size-chart">
                         <div class="size-boxes">
-                            <div class="size-box">S</div>
                             <div class="size-box">M</div>
                             <div class="size-box">L</div>
                             <div class="size-box">XL</div>
@@ -35,12 +49,12 @@ function generarGaleria() {
 
         galleryContainer.appendChild(galleryItem);
 
-        // Agregar evento de clic al botón para abrir el modal
-        var btnModal = galleryItem.querySelector('.btn-modal');
-        btnModal.addEventListener('click', function() {
-            // Obtener datos de la imagen actual y mostrarlos en el modal
-            mostrarDetallesModal(imagen);
-        });
+        if (imagen.disponible) {
+            var btnModal = galleryItem.querySelector('.btn-modal');
+            btnModal.addEventListener('click', function() {
+                mostrarDetallesModal(imagen);
+            });
+        }
     });
 }
 
@@ -81,10 +95,21 @@ function mostrarDetallesModal(imagen) {
     // obtener talla seleccionada
     var tallaSeleccionada = modal.querySelector('#talla').value;
 
+    // mensaje a las que tienen preordenar
+    var preorden = modal.querySelector('#preorden');
+
     modalImg.src = imagen.imagen_carrousel;
     modalImg2.src = imagen.imagen_carrousel_2;
     modalTitle.innerHTML = imagen.referencia;
     modalPrice.innerHTML = `Precio: $${imagen.precio}`;
+
+    // si es preordenar
+    if (imagen.preorden) {
+        preorden.innerHTML = '<span class="text-warning">Pre ordenar, lanzamiento en 5 días</span>';
+    }
+    else {
+        preorden.innerHTML = '';
+    }
 
     // Agregar evento de clic al botón para mostrar SweetAlert antes de enviar a WhatsApp
     modalWhatsapp.addEventListener('click', function() {

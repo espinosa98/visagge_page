@@ -966,6 +966,46 @@ page-header .cta-btn p {
   padding: 0;
 }
 
+/* Overlay de imagen no disponible */
+.overlay-not-available {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+    z-index: 10;
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+/* Estilo para el triángulo */
+.preorder-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 80px 80px 0 0;
+    border-color: #FCBC4C transparent transparent transparent;
+    z-index: 1;
+}
+
+.preorder-triangle span {
+    position: absolute;
+    top: -60px;
+    left: -5px;
+    transform: rotate(-45deg);
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
