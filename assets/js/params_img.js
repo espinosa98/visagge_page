@@ -8,7 +8,7 @@ export const imagenes = [
     { principal: `${base_modal}ref_06/ESPALDANEGRO6.webp`, interna: `${base_modal}ref_06/DELANTERONEGRO6.webp`, precio: `65.000`, referencia: `OVERSIZED "EXCLUSIVE" FURIA DEL LOBO OSCURO`,
         imagen_carrousel: `${base_modal}ref_06/DELANTERONEGRO6.webp`, imagen_carrousel_2: `${base_modal}ref_06/ESPALDANEGRO6.webp`, disponible: true ,preorden: false },
 
-    { principal: `${base_modal}ref_07/ESPALDANEGRO7.webp`, interna: `${base_modal}ref_07/DELANTERONEGRO7.webp`, precio: `65.000`, referencia: `OVERSIZED "EXCLUSIVE" WOLFEIN LEGIÓN SOMBRÍA`,
+    { principal: `${base_modal}ref_07/ESPALDANEGRO7.webp`, interna: `${base_modal}ref_07/DELANTERONEGRO7.webp`, precio: `55.000`, referencia: `OVERSIZED "EXCLUSIVE" WOLFEIN LEGIÓN SOMBRÍA`,
         imagen_carrousel: `${base_modal}ref_07/DELANTERONEGRO7.webp`, imagen_carrousel_2: `${base_modal}ref_07/ESPALDANEGRO7.webp`, disponible: true ,preorden: false },
 
     { principal: `${base_modal}ref_08/DELANTERONEGRO8.webp`, interna: `${base_modal}ref_08/ESPALDANEGRO8.webp`, precio: `55.000`, referencia: `OVERSIZED "PREMIUM" ECLIPSE DEL GUERRERO`,
@@ -17,7 +17,7 @@ export const imagenes = [
     { principal: `${base_modal}ref_05/DELANTEROGRIS5.webp`, interna: `${base_modal}ref_05/ESPALDAGRIS5.webp`, precio: `55.000`, referencia: `OVERSIZED "PREMIUM" LLAMAS DEL BERSERKER GRIS`,
         imagen_carrousel: `${base_modal}ref_05/DELANTEROGRIS5.webp`, imagen_carrousel_2: `${base_modal}ref_05/ESPALDAGRIS5.webp`, disponible: true ,preorden: true },
 
-    { principal: `${base_modal}ref_05/DELANTERONEGRO5.webp`, interna: `${base_modal}ref_05/ESPALDANEGRO5.webp`, precio: `55.900`, referencia: `OVERSIZED "PREMIUM" LLAMAS DEL BERSERKER NEGRO`,
+    { principal: `${base_modal}ref_05/DELANTERONEGRO5.webp`, interna: `${base_modal}ref_05/ESPALDANEGRO5.webp`, precio: `55.000`, referencia: `OVERSIZED "PREMIUM" LLAMAS DEL BERSERKER NEGRO`,
         imagen_carrousel: `${base_modal}ref_05/DELANTERONEGRO5.webp`, imagen_carrousel_2: `${base_modal}ref_05/ESPALDANEGRO5.webp`, disponible: true ,preorden: false },
 
     { principal: `${base_modal}ref_01/ESPALDAAZUL1.webp`, interna: `${base_modal}ref_01/FRENTEAZUL1.webp`, precio: `55.000`, referencia: `OVERSIZED "PREMIUM" BASICA WOLFEIN AZUL`,
@@ -35,10 +35,10 @@ export const imagenes = [
     { principal: `${base_modal}ref_04/ESPALDANEGRO4.webp`, interna: `${base_modal}ref_04/DELANTERONEGRO4.webp`, precio: `65.000`, referencia: `OVERSIZED "EXCLUSIVE" TORMENTA NOCTURNA NEGRO`,
         imagen_carrousel: `${base_modal}ref_04/DELANTERONEGRO4.webp`, imagen_carrousel_2: `${base_modal}ref_04/ESPALDANEGRO4.webp`, disponible: true ,preorden: false },
 
-    { principal: `${base_modal}ref_02/ESPALDAAZUL2.webp`, interna: `${base_modal}ref_02/DELANTEROAZUL2.webp`, precio: `65.000`, referencia: `OVERSIZED "EXCLUSIVE" FURIA NOCTURNA AZUL`,
+    { principal: `${base_modal}ref_02/ESPALDAAZUL2.webp`, interna: `${base_modal}ref_02/DELANTEROAZUL2.webp`, precio: `55.000`, referencia: `OVERSIZED "EXCLUSIVE" FURIA NOCTURNA AZUL`,
         imagen_carrousel: `${base_modal}ref_02/DELANTEROAZUL2.webp`, imagen_carrousel_2: `${base_modal}ref_02/ESPALDAAZUL2.webp`, disponible: true ,preorden: false },
 
-    { principal: `${base_modal}ref_02/ESPALDAGRIS2.webp`, interna: `${base_modal}ref_02/DELANTEROGRIS2.webp`, precio: `65.000`, referencia: `OVERSIZED "EXCLUSIVE" FURIA NOCTURNA GRIS`,
+    { principal: `${base_modal}ref_02/ESPALDAGRIS2.webp`, interna: `${base_modal}ref_02/DELANTEROGRIS2.webp`, precio: `55.000`, referencia: `OVERSIZED "EXCLUSIVE" FURIA NOCTURNA GRIS`,
         imagen_carrousel: `${base_modal}ref_02/DELANTEROGRIS2.webp`, imagen_carrousel_2: `${base_modal}ref_02/ESPALDAGRIS2.webp`, disponible: true ,preorden: true },
 
     { principal: `${base_modal}ref_02/ESPALDANEGRA2.webp`, interna: `${base_modal}ref_02/DELANTERONEGRO2.webp`, precio: `65.000`, referencia: `OVERSIZED "EXCLUSIVE" FURIA NOCTURNA NEGRO`,
